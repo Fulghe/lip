@@ -29,3 +29,5 @@ let%test "zero_one_same_1" = derive same_amount [4] |> to_string = ""
 let%test "zero_one_same_2" = derive same_amount [1;5;2;7;4] |> to_string = "1001"
 let%test "zero_one_same_3" = derive same_amount [0;5;2;8;7;0;5;4] |> to_string = "00110101"
 let%test "zero_one_same_4" = derive same_amount [3;7;0;5;0;5;0;5;4] |> to_string = "10001110"
+
+ciao
