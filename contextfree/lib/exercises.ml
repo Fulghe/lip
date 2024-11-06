@@ -1,15 +1,15 @@
 open Types
 
-(* Use this grammar structure as a blueprint for the exercises. *)
+(* Use this grammar record as a blueprint for the exercises. *)
 let todo : grammar =
   {
     symbols = [ S ];
     terminals = [ '0'; '1' ];
     productions =
-      [
-        S --> "0S0";
-        S --> "1S1";
-        S --> "";
+      [              (* Indexes *)
+        S --> "0S0"; (* 0 *)
+        S --> "1S1"; (* 1 *)
+        S --> "";    (* 2 *)
       ];
     start = S;
   }
