@@ -21,3 +21,6 @@ let%test "test_trace1_3" = parse "if false then if true then true else false els
 let%test "test_trace1_4" = try parse "false" |> trace1 = False with NoRuleApplies -> true
 let%test "test_trace1_5" = try parse "true" |> trace1 = True with NoRuleApplies -> true
 let%test "test_trace1_6" = parse "if (if false then false else false) then (if false then true else false) else (if true then false else true)" |> trace |> List.length < 10
+
+let%test "test_or_and_1" = parse "if true && true then false || true else true" |> eval = true
+let%test "test_or_and_2" = parse "if true && true then false || false else true" |> eval = false
