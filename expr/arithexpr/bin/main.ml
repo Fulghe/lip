@@ -46,3 +46,4 @@ match Array.length(Sys.argv) with
     | s -> s |> parse |> trace |> print_trace)
 (* wrong usage *)      
 | _ -> failwith "Usage: dune exec arithexpr [trace] [file]"
+
