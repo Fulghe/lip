@@ -59,3 +59,5 @@ match Array.length(Sys.argv) with
     | s -> s |> parse |> print_type)
 (* wrong usage *)      
 | _ -> failwith "Usage: dune exec arithexpr [trace|typecheck] [file]"
+
+
