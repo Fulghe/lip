@@ -38,7 +38,7 @@ let rec typecheck = function
   | _ -> raise (TypeError "La isZero va fatta su un NatT") )
 | Pred e0 ->  (
   match (typecheck e0) with
-  |  NatT -> NatT
+  |  NatT when e0 <> Zero -> NatT
   | _ -> raise (TypeError "La pred va fatta su un NatT") )
 | Succ e0 -> (
   match (typecheck e0) with
